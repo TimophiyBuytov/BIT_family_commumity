@@ -3,7 +3,14 @@ const video = document.querySelector("#intro-video");
 const fallbackImage = document.querySelector("#fallback-image");
 const profileActions = document.querySelector("#profile-actions");
 const startButton = document.querySelector("#start-button");
+const siteHeader = document.querySelector("#site-header");
+const menuButton = siteHeader.querySelector(".menu-button");
 let selectedProfile = null;
+
+function setMenuOpen(isOpen) {
+  siteHeader.classList.toggle("is-menu-open", isOpen);
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+}
 
 function revealProfiles() {
   hero.classList.add("is-finished");
@@ -80,4 +87,14 @@ function startPlayback() {
 }
 
 startButton.addEventListener("click", startPlayback);
+menuButton.addEventListener("click", () => {
+  setMenuOpen(menuButton.getAttribute("aria-expanded") !== "true");
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    setMenuOpen(false);
+  }
+});
+
 video.play().catch(handlePlaybackError);

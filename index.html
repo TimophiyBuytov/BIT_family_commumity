@@ -42,13 +42,19 @@
             <span class="brand__subtitle">Community</span>
           </a>
 
-          <nav class="main-nav" aria-label="Основная навигация">
+          <nav class="main-nav" id="main-navigation" aria-label="Основная навигация">
             <a class="main-nav__link" href="#home" aria-current="page">Home</a>
             <span class="main-nav__label">About</span>
             <span class="main-nav__label">Projects</span>
           </nav>
 
-          <button class="menu-button" type="button" aria-label="Меню" aria-expanded="false">
+          <button
+            class="menu-button"
+            type="button"
+            aria-label="Меню"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+          >
             <span></span>
             <span></span>
             <span></span>
