@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#77736e">
+    <meta
+      name="description"
+      content="B.I.T Family Community — семейное творческое сообщество."
+    >
+    <title>B.I.T Family Community</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="home" aria-label="B.I.T Family Community">
+        <video
+          class="hero__video"
+          id="intro-video"
+          autoplay
+          muted
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="./assets/video/intro.mp4" type="video/mp4">
+        </video>
+        <img
+          class="hero__fallback"
+          id="fallback-image"
+          src="./assets/images/intro-fallback.jpg"
+          alt=""
+          aria-hidden="true"
+          hidden
+        >
+        <div class="hero__scrim" aria-hidden="true"></div>
+
+        <header class="site-header" id="site-header">
+          <a class="brand" href="#home" aria-label="B.I.T Family Community — на главную">
+            <span class="brand__name">B.I.T Family</span>
+            <span class="brand__subtitle">Community</span>
+          </a>
+
+          <nav class="main-nav" aria-label="Основная навигация">
+            <a class="main-nav__link" href="#home" aria-current="page">Home</a>
+            <span class="main-nav__label">About</span>
+            <span class="main-nav__label">Projects</span>
+          </nav>
+
+          <button class="menu-button" type="button" aria-label="Меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </header>
+
+        <button class="start-button" id="start-button" type="button" hidden>
+          Начать просмотр
+        </button>
+
+        <div class="profile-actions" id="profile-actions" aria-label="Выбор профиля" hidden>
+          <button class="profile-button" type="button" data-profile="ilona">
+            <span aria-hidden="true">←</span>
+            <span>Илона</span>
+          </button>
+          <button class="profile-button" type="button" data-profile="timofey">
+            <span>Тимофей</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
